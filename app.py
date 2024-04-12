@@ -14,12 +14,7 @@ with open('jeson/blogs.json','r', encoding='utf-8')  as s:
 local_server=True
 
 panel = Flask(__name__)
-
-if local_server:
-    panel.config["SQLALCHEMY_DATABASE_URI"] = paramiters['local_uri']
-else:
-    panel.config["SQLALCHEMY_DATABASE_URI"] = paramiters['prodaction_uri']
-
+panel.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root:@localhost/flask_rayhan"
 db = SQLAlchemy(panel)
 
 
