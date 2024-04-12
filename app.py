@@ -155,4 +155,3 @@ def addlogin():
         return redirect(url_for("addpost"))
     return render_template("addpostlogin.html")
 
-panel.run(debug=True)
